@@ -239,6 +239,7 @@ button:hover {
   width: 100%;
   background-image: url("images/winterC1.jpg");
   background-size: cover;
+  background-position: center;
   transform-origin: center center 0;
   padding: 13vw 0 5vw;
 }
