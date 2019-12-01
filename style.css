@@ -32,7 +32,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 30px 10%;
-  position: relative;;
+  position: relative;
   z-index: 2;
 }
 
@@ -166,111 +166,67 @@ button:hover {
 /*end hamburger responsive css*/
 
 /*begin parallax effect*/
-.torso {
-  top: -10vw;
-  box-sizing: border-box;
-  min-height: 100vh;
-  padding: 30vw 0 5vw;
+
+body, html {
+  height: 100%;
+  margin: 0;
+  font: 400 15px/1.8 "Lato", sans-serif;
+  color: #777;
+}
+
+.bgimg-1, .bgimg-2, .bgimg-3 {
   position: relative;
-  transform-style: inherit;
-  width: 100vw;
-}
-
-.torso, .torso:before {
-  background: 50% 50% / cover;
-}
-
-.torso::before {
-  bottom: 0;
-  content: "";
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-  display: block;
-  background-image: url("images/skierBG.jpg");
-  background-size: cover;
-  transform-origin: center center 0;
-  transform: translateZ(-1px) scale(2.4);
-  z-index: -1;
-  min-height: 100vh;
-}
-
-.torso * {
-  text-align: center;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 500;
-  color: black;
-}
-
-.torso a {
-  margin-top: 5px;
-}
-
-.clothingbtn {
-  display: block;
-  margin: auto;
-  border-radius: 6px;
-  color: white;
-}
-
-.box {
-  background-color: rgba(226,226,226,0.5);
-  width: 400px;
-  height: 200px;
-  display: table-cell;
-  vertical-align: middle;
-}
-
-.boxbox {
-  max-width: 400px;
-  display: inline-block;
-}
-
-.boxboxbox {
-  margin: auto;
-}
-/*end parallax effect*/
-/*begin legs*/
-.legs {
-  position: absolute;
-  top: 900px;
-  height: 500px;
-  width: 100%;
-  background-image: url("images/winterC1.jpg");
-  background-size: cover;
+  opacity: 0.65;
+  background-attachment: fixed;
   background-position: center;
-  transform-origin: center center 0;
-  padding: 13vw 0 5vw;
-}
-
-.legs * {
-  text-align: center;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 500;
-  color: black;
-}
-
-.legs a {
-  margin-top: 5px;
-}
-
-.clothingbtn {
-  display: block;
-  margin: auto;
-  border-radius: 6px;
-  color: white;
-}
-
-.torso::before {
-  bottom: 0;
-  content: "";
-  left: 0;
-  right: 0;
-  top: 0;
-  display: block;
+  background-repeat: no-repeat;
   background-size: cover;
-  z-index: -1;
-  min-height: 100vh;
+
 }
-/*end legs*/
+.bgimg-1 {
+  background-image: url("images/skierBG.jpg");
+  min-height: 100%;
+}
+
+.bgimg-2 {
+  background-image: url("images/winterC1.jpg");
+  min-height: 400px;
+}
+
+.bgimg-3 {
+  background-image: url("images/winteroutfit1.jpg");
+  min-height: 400px;
+}
+
+.caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+
+.caption span.border {
+  background-color: #111;
+  color: #fff;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+}
+
+h3 {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font: 20px "Lato", sans-serif;
+  color: #111;
+}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+  .bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: scroll;
+  }
+}
+
+/*end parallax effect*/
